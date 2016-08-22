@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>my zwave</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 2px 5px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      #nodesTB tr:nth-child(odd) {background: #CCC}
+      #val tr:nth-child(odd) {background: #fff}
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/api_client.js"></script>
+  </head>
+  <body>
+
+<button hidden onclick="connect2()">conected</button>
+    <table id="nodesTB" border="0" style="width:100%; padding:15px;">
+      <tr>
+        <th>id</th>
+        <th>manufacturer</th>
+        <th>product</th>
+        <th>type</th>
+        <th>name</th>
+        <th>loc</th>
+        <th>notification</th>
+        <th>value</th>
+      </tr>
+
+    </table>
+
+
+    <div id="controls" style="padding-left: 340px; padding-right: 340px; min-width: 550px;">
+        <div style="float: left; position: relative; width: 100%;">
+        	<input name="config" value="status" checked="checked" onclick="return DoConfig(this.id);" id="configcur" style="text-align: left;" type="radio">Current Values
+        	<input name="config" id="configcon" value="config" style="text-align: left;" onclick="return DoConfig(this.id);" type="radio">Configuration
+        	<input name="config" id="configinfo" value="info" style="text-align: left;" onclick="return DoConfig(this.id);" type="radio">Information
+          <hr>
+          <div id="divconfigbas" class="" style="margin-left: auto; margin-right: auto; text-align: center; clear: both;">
+        	</div>
+          <hr>
+          <div id="divconfigcur" class="" style="margin-left: auto; margin-right: auto; text-align: center; clear: both;">
+        	</div>
+          <hr>
+        	<div id="divconfigcon" class="hide" style="margin-left: auto; margin-right: auto; text-align: center; clear: both;">
+        	</div>
+          <hr>
+        	<div id="divconfiginfo" class="hide" style="margin-left: auto; margin-right: auto; text-align: center; clear: both;">
+        	</div>
+          <hr>
+        </div>
+        <div style="float: left; position: relative; width: 340px; margin-right: -340px;">&nbsp;</div>
+    </div>
+
+    <div class="container">
+        <div ng-controller="mainController">
+        </div>
+    </div>
+
+    <ul id="messages" style=" overflow: scroll; height: 450px; width:100%; padding:15px;"></ul>
+
+  </body>
+</html>

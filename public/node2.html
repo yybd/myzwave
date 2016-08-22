@@ -1,0 +1,22 @@
+{{#nodes}}
+<div class="container node node2 {{isLogin}}" id="{{id}}">
+  <div class="row" id="row1">
+    <div class="col-sm-11" id="col1"></div>
+    <div class="col-sm-1 text-right" id="col2">
+      <span class="glyphicon glyphicon-cog" id="conf"></span>
+    </div>
+  </div>
+  <div class="row" id="row2">
+    <div data-id="{{value_id1}}" class="col-sm-6 glyphicon glyphicon-off bt1 {{Switch1}}" id="power">
+    </div>
+    <div data-id="{{value_id2}}" class="col-sm-6 glyphicon glyphicon-off bt2 {{Switch2}}" id="power">
+    </div>
+  </div>
+  <div class="row" id="row3">
+    <div class="col-sm-10" id="col1">
+      <span id="name"  data-content="{{name}}">{{name}}</span>
+    </div>
+
+  </div>
+</div>
+{{/nodes}}

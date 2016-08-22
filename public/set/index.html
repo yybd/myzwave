@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>1 בית חכם</title>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="../js/jquery.min.js"></script>
+    <!-- include the jQuery and jQuery UI scripts -->
+    <script src="../js/jquery-ui.js"></script>
+    <!-- plus a jQuery UI theme, here I use "flick" -->
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/mustache.min.js"></script>
+
+    <script src="../socket.io/socket.io.js"></script>
+
+    <script src="js/api_client.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+  </head>
+   <body>
+
+     <script id="nodeTpl" type="text/template">
+       <li class="node1 list-group-item">
+         <div id="id">{{id}} </div>
+         <div id="manufacturer">{{manufacturer}}</div>
+         <div id="product">{{product}}</div>
+         <div id="type">{{type}}</div>
+         <div id="name">{{name}}</div>
+         <div id="loc">{{loc}}</div>
+         <div id="notification">{{notific}}</div>
+         <div id="value"></div>
+       '</li>'
+    </script>
+
+    <script id="boolTpl" type="text/template">
+      <div>
+        <div>{{label}}</div>
+        <button>true</button>
+        <button>false</button>
+        <div>{{value}}</div>
+      </div>
+     </script>
+
+     <script id="listTpl" type="text/template">
+      <div>
+      </div>
+    </script>
+
+    <script id="textTpl" type="text/template">
+      <div>
+        <div> {{label}}</div> <input>{{value}}</input><div> {{units}} </div> <button>submit</button>
+      </div>
+    </script>
+
+    <script id="buttonTpl" type="text/template">
+     <div>
+       <button>{{label}} </button>
+     </div>
+    </script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <ul id="list1" class = "nav nav-pills nav-stacked"></ul>
+        </div>
+      </div>
+      <div>
+      <div class="row">
+        <div id="values">
+          <h2 class="row" id="node-val"></h2>
+          <div class="row" id="values-user">
+            <div class="col-md-12" >
+              <h3>user:</h3>
+              <ul id="list-user" class = "nav nav-pills nav-stacked"></ul>
+            </div>
+          </div>
+          <div class="row"  id="values-config">
+            <div class="col-md-12">
+              <h3>config:</h3>
+                <ul id="list-config" class = "nav nav-pills nav-stacked"></ul>
+            </div>
+          </div>
+          <div class="row" id="values-system">
+            <div class="col-md-12">
+              <h3>system:</h3>
+              <ul id="list-system" class = "nav nav-pills nav-stacked"></ul>
+            </div>
+          </div>
+          <div class="row"id="values-basic">
+            <div class="col-md-12" >
+              <h3>basic:</h3>
+              <ul id="list-basic" class = "nav nav-pills nav-stacked"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      <div class="row">
+        <div id="log">
+          <div class="glyphicon glyphicon-cog" id="bt3" ></div>
+          <ul id="messages"></ul>
+        </div>
+      </div>
+    </div>
+
+
+
+     <div class="col-md-3">
+
+
+   </body>
+</html>

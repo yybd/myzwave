@@ -1,0 +1,38 @@
+/** Font-Face **/
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format('eot'),
+  	   url("../fonts/fontawesome-webfont.woff") format('woff'),
+  	   url("../fonts/fontawesome-webfont.ttf") format('truetype'),
+  	   url("../fonts/fontawesome-webfont.svg#FontAwesome") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.btn-round {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+     line-height: 90px;
+     font-size: 40px;
+     color: #d9edf7;
+     background-color: #fff;
+     border: 2px solid #d9edf7;
+}
+
+.btn-round.btn-lg {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-round.btn-sm {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-round.btn-xs {
+    width: 24px;
+    height: 24px;
+}

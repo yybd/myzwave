@@ -1,0 +1,61 @@
+.node1{
+  background-color:#ffffff;
+  height: 30px;
+
+  overflow: hidden;
+}
+
+
+.
+
+#log { padding: 10px 20px;
+  border-top:  2px solid #5c8a8a;
+}
+
+
+#messages { list-style-type: none; margin: 0; padding: 0; overflow: scroll;}
+#messages li { padding: 2px 5px; }
+#messages li:nth-child(odd) { background: #eee; }
+
+#list1 { list-style-type: none; margin: 0; padding: 0; overflow: scroll;}
+#list1 li { padding: 2px 5px; }
+#list1 li:nth-child(odd) { background: #eee; }
+
+.node1 div{
+}
+#list1 li:hover {
+    background-color: rgb(230, 245, 255);
+}
+
+.node1 div span{
+  font-weight: bold;
+}
+
+#log{
+  border-top: 2px solid #5c8a8a;
+  margin-top: 10px;
+}
+
+.value{
+  border-top: 1px solid #5c8a8a;
+}
+
+#values .row{
+  margin-top: 20px;
+  border-bottom: 3px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.value{
+  padding: 5px;
+  height: 50px;
+}
+
+.label{
+  color: black
+}
+
+#values{
+  border: 1px solid #5c8a8a;
+}
