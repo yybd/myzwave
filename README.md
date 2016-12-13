@@ -1,2 +1,2 @@
-Open-ZWave REST
+Open-ZWave REST & socket.io
 ==================
